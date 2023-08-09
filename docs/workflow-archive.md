@@ -7,10 +7,6 @@ The workflow archive stores the status of the workflow, which pods have been exe
 The job logs of the workflow pods will not be archived.
 If you need to save the logs of the pods, you must setup an [artifact repository](artifact-repository-ref.md) according to [this doc](configure-artifact-repository.md).
 
-The quick-start deployment includes a Postgres database server.
-In this case the workflow archive is already enabled.
-Such a deployment is convenient for test environments, but in a production environment you must use a production quality database service.
-
 ## Enabling Workflow Archive
 
 To enable archiving of the workflows, you must configure database parameters in the `persistence` section of [your configuration](workflow-controller-configmap.yaml) and set `archive:` to `true`.
